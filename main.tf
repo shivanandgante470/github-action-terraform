@@ -6,9 +6,9 @@ provider "azurerm" {
 # Terraform Backend Configuration Block Pre-Created
 terraform {
   backend "azurerm"{
-      
+
      resource_group_name = "rg-storageaccount" 
-     storage_account_name = "azurestorageaccount"
+     storage_account_name = "githubstorageaccount1"
      container_name = "copystoragetfstate"
      key = "copyterraform.tfstate"
   }
@@ -38,3 +38,4 @@ resource "azurerm_storage_account" "example2" {
   location                 = azurerm_resource_group.example.location
   account_tier             = "Standard"
   account_replication_type = "GRS"
+}
